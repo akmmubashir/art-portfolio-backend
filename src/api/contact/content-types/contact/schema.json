@@ -1,19 +1,19 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home"
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "ogTitle": {
+    "ogTilte": {
       "type": "string",
-      "default": "ogTitle",
+      "default": "ogTilte",
       "required": true,
       "unique": true
     },
@@ -25,6 +25,7 @@
     },
     "ogImage": {
       "type": "media",
+      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [
@@ -45,26 +46,15 @@
     },
     "heading": {
       "type": "string",
-      "default": "Portfolio",
+      "default": "heading",
       "required": true,
       "unique": true
     },
-    "subHeading": {
-      "type": "string",
-      "default": "architecture",
+    "description": {
+      "type": "text",
+      "default": "description",
       "required": true,
       "unique": true
-    },
-    "heroImage": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "abouts",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home"
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "ogTitle": {
+    "ogTilte": {
       "type": "string",
       "default": "ogTitle",
       "required": true,
@@ -45,25 +45,31 @@
     },
     "heading": {
       "type": "string",
-      "default": "Portfolio",
+      "default": "heading",
       "required": true,
       "unique": true
     },
-    "subHeading": {
-      "type": "string",
-      "default": "architecture",
+    "description": {
+      "type": "text",
+      "default": "description",
       "required": true,
       "unique": true
     },
-    "heroImage": {
+    "aboutImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "resume": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
     }
   }
