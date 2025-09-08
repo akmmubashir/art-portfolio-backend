@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string",
+      "default": "ogTitle",
+      "required": true,
+      "unique": true
+    },
+    "ogDescription": {
+      "type": "text",
+      "default": "ogDescription",
+      "required": true,
+      "unique": true
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metaTitle": {
+      "type": "string",
+      "default": "metaTitle",
+      "required": true,
+      "unique": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "default": "metaDescription",
+      "required": true,
+      "unique": true
+    },
+    "heading": {
+      "type": "string",
+      "default": "Portfolio",
+      "required": true,
+      "unique": true
+    },
+    "subHeading": {
+      "type": "string",
+      "default": "architecture",
+      "required": true,
+      "unique": true
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

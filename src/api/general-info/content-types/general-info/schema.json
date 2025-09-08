@@ -11,21 +11,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "DayLogo": {
+    "dayLogo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images"
       ]
     },
-    "NightLogo": {
+    "nightLogo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images"
       ]
     },
-    "Rights": {
+    "rights": {
       "type": "string",
       "required": true,
       "unique": true
