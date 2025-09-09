@@ -55,6 +55,12 @@
       "default": "description",
       "required": true,
       "unique": true
+    },
+    "pageTitle": {
+      "type": "string",
+      "default": "PageTitle",
+      "required": true,
+      "unique": true
     }
   }
 }

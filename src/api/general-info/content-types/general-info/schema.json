@@ -29,6 +29,12 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "sectionName": {
+      "type": "string",
+      "default": "sectionName",
+      "required": true,
+      "unique": true
     }
   }
 }

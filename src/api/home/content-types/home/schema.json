@@ -65,6 +65,12 @@
         "videos",
         "audios"
       ]
+    },
+    "pageTitle": {
+      "type": "string",
+      "default": "PageTitle",
+      "required": true,
+      "unique": true
     }
   }
 }

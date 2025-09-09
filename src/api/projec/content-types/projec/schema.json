@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "projecs",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About"
+    "singularName": "projec",
+    "pluralName": "projecs",
+    "displayName": "Projects"
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +17,7 @@
       "required": true,
       "unique": true
     },
-    "ogTilte": {
+    "ogTitle": {
       "type": "string",
       "default": "ogTitle",
       "required": true,
@@ -49,34 +49,10 @@
       "required": true,
       "unique": true
     },
-    "heading": {
-      "type": "string",
-      "default": "heading",
-      "required": true,
-      "unique": true
-    },
-    "description": {
-      "type": "text",
-      "default": "description",
-      "required": true,
-      "unique": true
-    },
-    "aboutImage": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "resume": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+    "List": {
+      "type": "component",
+      "component": "project.project-list",
+      "repeatable": true
     }
   }
 }

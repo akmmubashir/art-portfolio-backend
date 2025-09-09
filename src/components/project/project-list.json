@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_project_project_lists",
+  "info": {
+    "displayName": "projectList",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "title",
+      "required": true,
+      "unique": true
+    },
+    "subTitle": {
+      "type": "string",
+      "default": "subTitle",
+      "required": true,
+      "unique": false
+    },
+    "color": {
+      "type": "string",
+      "default": "text-[]",
+      "required": true,
+      "unique": false
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bgVector": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bgImageMob": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
