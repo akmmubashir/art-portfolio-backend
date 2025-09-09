@@ -49,7 +49,7 @@
       "required": true,
       "unique": true
     },
-    "List": {
+    "list": {
       "type": "component",
       "component": "project.project-list",
       "repeatable": true

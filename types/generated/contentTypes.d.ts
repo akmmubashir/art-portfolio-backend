@@ -594,7 +594,7 @@ export interface ApiProjecProjec extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    List: Schema.Attribute.Component<'project.project-list', true>;
+    list: Schema.Attribute.Component<'project.project-list', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
