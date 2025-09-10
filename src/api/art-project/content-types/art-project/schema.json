@@ -86,12 +86,12 @@
     "images": {
       "type": "component",
       "component": "project.image-list",
-      "repeatable": false
+      "repeatable": true
     },
     "video": {
       "type": "component",
       "component": "project.video-list",
-      "repeatable": false
+      "repeatable": true
     }
   }
 }

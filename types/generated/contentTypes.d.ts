@@ -453,7 +453,7 @@ export interface ApiArtProjectArtProject extends Struct.SingleTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.DefaultTo<'heading'>;
-    images: Schema.Attribute.Component<'project.image-list', false>;
+    images: Schema.Attribute.Component<'project.image-list', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -489,7 +489,7 @@ export interface ApiArtProjectArtProject extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    video: Schema.Attribute.Component<'project.video-list', false>;
+    video: Schema.Attribute.Component<'project.video-list', true>;
   };
 }
 
