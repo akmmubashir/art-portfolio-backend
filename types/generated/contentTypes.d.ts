@@ -540,9 +540,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.DefaultTo<'ogDescription'>;
-    ogImage: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    ogImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     ogTilte: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
