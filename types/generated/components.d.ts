@@ -7,11 +7,15 @@ export interface ContactSocialMedia extends Struct.ComponentSchema {
     icon: 'connector';
   };
   attributes: {
-    dayIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    dayIcon: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     link: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    nightIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    nightIcon: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

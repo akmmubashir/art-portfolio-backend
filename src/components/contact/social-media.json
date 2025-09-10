@@ -19,6 +19,7 @@
     },
     "dayIcon": {
       "type": "media",
+      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [
@@ -27,6 +28,7 @@
     },
     "nightIcon": {
       "type": "media",
+      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [
