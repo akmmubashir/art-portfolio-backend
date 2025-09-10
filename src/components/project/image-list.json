@@ -8,7 +8,6 @@
   "attributes": {
     "image": {
       "type": "media",
-      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [

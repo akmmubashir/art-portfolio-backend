@@ -7,15 +7,11 @@ export interface ContactSocialMedia extends Struct.ComponentSchema {
     icon: 'connector';
   };
   attributes: {
-    dayIcon: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    dayIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    nightIcon: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    nightIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
@@ -30,9 +26,7 @@ export interface ProjectImageList extends Struct.ComponentSchema {
     icon: 'landscape';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     width: Schema.Attribute.Enumeration<['Full Width', 'Half Width']> &
       Schema.Attribute.Required;
   };
@@ -45,18 +39,10 @@ export interface ProjectProjectList extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    avatar: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
-    bgImage: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
-    bgImageMob: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
-    bgVector: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    avatar: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    bgImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    bgImageMob: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    bgVector: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     color: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'text-[]'>;
