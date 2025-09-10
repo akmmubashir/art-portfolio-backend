@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_video_lists",
+  "info": {
+    "displayName": "videoList",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "width": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Full Width",
+        "Half Width"
+      ]
+    }
+  },
+  "config": {}
+}

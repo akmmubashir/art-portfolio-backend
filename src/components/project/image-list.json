@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_image_lists",
+  "info": {
+    "displayName": "imageList",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "width": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Full Width",
+        "Half Width"
+      ]
+    }
+  },
+  "config": {}
+}

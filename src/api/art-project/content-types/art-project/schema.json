@@ -1,19 +1,25 @@
 {
   "kind": "singleType",
-  "collectionName": "contacts",
+  "collectionName": "art_projects",
   "info": {
-    "singularName": "contact",
-    "pluralName": "contacts",
-    "displayName": "Contact"
+    "singularName": "art-project",
+    "pluralName": "art-projects",
+    "displayName": "ArtProject"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "ogTilte": {
+    "pageTitle": {
       "type": "string",
-      "default": "ogTilte",
+      "default": "Art Project",
+      "required": true,
+      "unique": true
+    },
+    "ogTitle": {
+      "type": "string",
+      "default": "ogTitle",
       "required": true,
       "unique": true
     },
@@ -25,7 +31,6 @@
     },
     "ogImage": {
       "type": "media",
-      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [
@@ -52,37 +57,41 @@
     },
     "description": {
       "type": "text",
-      "default": "description",
+      "default": "Description",
       "required": true,
       "unique": true
     },
-    "pageTitle": {
+    "bannerBg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bannerBgMob": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subHeading": {
       "type": "string",
-      "default": "PageTitle",
+      "default": "subHeading",
       "required": true,
       "unique": true
     },
-    "social": {
+    "images": {
       "type": "component",
-      "component": "contact.social-media",
+      "component": "project.image-list",
       "repeatable": false
     },
-    "email": {
-      "type": "email",
-      "required": true,
-      "unique": true
-    },
-    "countryCode": {
-      "type": "string",
-      "default": "+",
-      "required": true,
-      "unique": true
-    },
-    "phoneNumber": {
-      "type": "biginteger",
-      "required": true,
-      "unique": true,
-      "default": "00000000000"
+    "video": {
+      "type": "component",
+      "component": "project.video-list",
+      "repeatable": false
     }
   }
 }
