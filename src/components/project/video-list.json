@@ -8,6 +8,7 @@
   "attributes": {
     "video": {
       "type": "media",
+      "private": true,
       "multiple": false,
       "required": true,
       "allowedTypes": [

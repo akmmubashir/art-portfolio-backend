@@ -30,7 +30,9 @@ export interface ProjectImageList extends Struct.ComponentSchema {
     icon: 'landscape';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     width: Schema.Attribute.Enumeration<['Full Width', 'Half Width']> &
       Schema.Attribute.Required;
   };
@@ -43,10 +45,18 @@ export interface ProjectProjectList extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    avatar: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    bgImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    bgImageMob: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    bgVector: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    avatar: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    bgImage: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    bgImageMob: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    bgVector: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     color: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'text-[]'>;
@@ -67,7 +77,9 @@ export interface ProjectVideoList extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
-    video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
+    video: Schema.Attribute.Media<'videos'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     width: Schema.Attribute.Enumeration<['Full Width', 'Half Width']> &
       Schema.Attribute.Required;
   };
