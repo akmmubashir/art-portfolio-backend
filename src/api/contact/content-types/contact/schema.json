@@ -65,7 +65,7 @@
     "social": {
       "type": "component",
       "component": "contact.social-media",
-      "repeatable": false
+      "repeatable": true
     },
     "email": {
       "type": "email",

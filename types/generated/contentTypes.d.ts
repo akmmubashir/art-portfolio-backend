@@ -556,7 +556,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       Schema.Attribute.Unique &
       Schema.Attribute.DefaultTo<'00000000000'>;
     publishedAt: Schema.Attribute.DateTime;
-    social: Schema.Attribute.Component<'contact.social-media', false>;
+    social: Schema.Attribute.Component<'contact.social-media', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
