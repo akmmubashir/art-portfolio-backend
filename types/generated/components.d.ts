@@ -63,9 +63,7 @@ export interface ProjectVideoList extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
-    video: Schema.Attribute.Media<'videos'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
+    video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
     width: Schema.Attribute.Enumeration<['Full Width', 'Half Width']> &
       Schema.Attribute.Required;
   };
