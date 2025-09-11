@@ -1,0 +1,98 @@
+{
+  "kind": "singleType",
+  "collectionName": "india_projects",
+  "info": {
+    "singularName": "india-project",
+    "pluralName": "india-projects",
+    "displayName": "IndiaProject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "default": "India Project",
+      "required": true,
+      "unique": true
+    },
+    "ogTitle": {
+      "type": "string",
+      "default": "ogTitle",
+      "required": true,
+      "unique": true
+    },
+    "ogDescription": {
+      "type": "text",
+      "default": "ogDescription",
+      "required": true,
+      "unique": true
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metaTitle": {
+      "type": "string",
+      "default": "metaTitle",
+      "required": true,
+      "unique": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "default": "metaDescription",
+      "required": true,
+      "unique": true
+    },
+    "heading": {
+      "type": "string",
+      "default": "heading",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Description",
+      "required": true,
+      "unique": true
+    },
+    "bannerBg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bannerBgMob": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subHeading": {
+      "type": "string",
+      "default": "subHeading",
+      "required": true,
+      "unique": true
+    },
+    "images": {
+      "type": "component",
+      "component": "project.image-list",
+      "repeatable": true
+    },
+    "video": {
+      "type": "component",
+      "component": "project.video-list",
+      "repeatable": true
+    }
+  }
+}
+

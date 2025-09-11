@@ -719,6 +719,70 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIndiaProjectIndiaProject extends Struct.SingleTypeSchema {
+  collectionName: 'india_projects';
+  info: {
+    displayName: 'IndiaProject';
+    pluralName: 'india-projects';
+    singularName: 'india-project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerBg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    bannerBgMob: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'Description'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'heading'>;
+    images: Schema.Attribute.Component<'project.image-list', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::india-project.india-project'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'metaDescription'>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'metaTitle'>;
+    ogDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'ogDescription'>;
+    ogImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'ogTitle'>;
+    pageTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'India Project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'subHeading'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.Component<'project.video-list', true>;
+  };
+}
+
 export interface ApiProjecProjec extends Struct.SingleTypeSchema {
   collectionName: 'projecs';
   info: {
@@ -1283,6 +1347,7 @@ declare module '@strapi/strapi' {
       'api::education-project.education-project': ApiEducationProjectEducationProject;
       'api::general-info.general-info': ApiGeneralInfoGeneralInfo;
       'api::home.home': ApiHomeHome;
+      'api::india-project.india-project': ApiIndiaProjectIndiaProject;
       'api::projec.projec': ApiProjecProjec;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
