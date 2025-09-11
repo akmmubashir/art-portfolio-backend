@@ -13,7 +13,7 @@
   "attributes": {
     "pageTitle": {
       "type": "string",
-      "default": "pageTitle",
+      "default": "Education Project",
       "required": true,
       "unique": true
     },
@@ -42,6 +42,56 @@
       "default": "metaTitle",
       "required": true,
       "unique": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "default": "metaDescription",
+      "required": true,
+      "unique": true
+    },
+    "heading": {
+      "type": "string",
+      "default": "heading",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Description",
+      "required": true,
+      "unique": true
+    },
+    "bannerBg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bannerBgMob": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subHeading": {
+      "type": "string",
+      "default": "subHeading",
+      "required": true,
+      "unique": true
+    },
+    "images": {
+      "type": "component",
+      "component": "project.image-list",
+      "repeatable": true
+    },
+    "video": {
+      "type": "component",
+      "component": "project.video-list",
+      "repeatable": true
     }
   }
 }
