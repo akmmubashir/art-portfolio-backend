@@ -613,7 +613,7 @@ export interface ApiEducationProjectEducationProject
     pageTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
-      Schema.Attribute.DefaultTo<'Art Project'>;
+      Schema.Attribute.DefaultTo<'Education Project'>;
     publishedAt: Schema.Attribute.DateTime;
     subHeading: Schema.Attribute.String &
       Schema.Attribute.Required &
