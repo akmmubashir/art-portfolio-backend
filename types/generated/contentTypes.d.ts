@@ -561,6 +561,71 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiEducationProjectEducationProject
+  extends Struct.SingleTypeSchema {
+  collectionName: 'education_projects';
+  info: {
+    displayName: 'EducationProject';
+    pluralName: 'education-projects';
+    singularName: 'education-project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerBg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    bannerBgMob: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'Description'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'heading'>;
+    images: Schema.Attribute.Component<'project.image-list', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::education-project.education-project'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'metaDescription'>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'metaTitle'>;
+    ogDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'ogDescription'>;
+    ogImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'ogTitle'>;
+    pageTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'Art Project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'subHeading'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.Component<'project.video-list', true>;
+  };
+}
+
 export interface ApiGeneralInfoGeneralInfo extends Struct.SingleTypeSchema {
   collectionName: 'general_infos';
   info: {
@@ -1215,6 +1280,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::art-project.art-project': ApiArtProjectArtProject;
       'api::contact.contact': ApiContactContact;
+      'api::education-project.education-project': ApiEducationProjectEducationProject;
       'api::general-info.general-info': ApiGeneralInfoGeneralInfo;
       'api::home.home': ApiHomeHome;
       'api::projec.projec': ApiProjecProjec;

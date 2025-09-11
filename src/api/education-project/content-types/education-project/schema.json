@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "education_projects",
+  "info": {
+    "singularName": "education-project",
+    "pluralName": "education-projects",
+    "displayName": "EducationProject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "default": "pageTitle",
+      "required": true,
+      "unique": true
+    },
+    "ogTitle": {
+      "type": "string",
+      "default": "ogTitle",
+      "required": true,
+      "unique": true
+    },
+    "ogDescription": {
+      "type": "text",
+      "default": "ogDescription",
+      "required": true,
+      "unique": true
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metaTitle": {
+      "type": "string",
+      "default": "metaTitle",
+      "required": true,
+      "unique": true
+    }
+  }
+}
